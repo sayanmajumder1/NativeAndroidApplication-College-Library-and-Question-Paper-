@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/icon"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#F4790C">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dim_160"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessLeaf">
+
+            <ImageView
+                android:layout_width="@dimen/dim_108"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="-14dp"
+                android:layout_marginBottom="0dp"
+                android:src="@drawable/vih"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF9800"
+        app:tabIndicatorColor="@color/white"
+        app:tabSelectedTextColor="@color/white">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pageholder2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

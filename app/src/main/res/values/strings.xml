@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Vision</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="text8">BCA(Bachelor Of Computer Application) Department Burdwan University</string>
+    <string name="text12">About</string>
+    <string name="text9">About Our  Startup:-
+        🚀 Crafting Innovative Android Experiences! 📱 | We are [Bluebird], your go-to Android app development wizards. 🧙‍♂️ Transforming ideas into sleek, user-friendly apps that captivate and conquer. 🌟 Let\'s code your success story together! 🌐 #AndroidAppDev #InnovationUnleashed 📈.
+   PREFACE TO THE Vison:-  Question paper is an instrument which is used in theory and practical examination. It has four characteristics-relevance, objectivity, reliability and validity.Questioning is the most important device of teaching. The teacher keeps in close touch with his class by means of questioning. The teaching-learning process becomes effective, when knowledge is given and shares in the class,through this questioning.  i) Question should be definite rather than vague.  ii) It should be relevant to the theme.  iii) Question should be continuous one.  The questions format of this application follows syllabus and questions of Burdwan University,Maulana Abul Kalam Azad University of Technology . We design this application for the student of BCA ,BSC Bio TechnologyBSC.Bio Chemistry,BBA. This application is very much user-friendly and includes all subjects in one volume.  [NOTE: Read the syllabus carefully. There are some changes in the syllabus of all Department (BCA, BSC.Bio Technology BSC. Bio Chemistry , BBA)We have compiled previous year questions in this Application.] </string>
+    <string name="_101_computer_fundamental">101-Computer FundaMental</string>
+    <string name="todo2">TODO2</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account_register">Don\'t have an account? Register</string>
+    <string name="forget_password">Forget Password ?</string>
+    <string name="enter_the_password">Enter the Password</string>
+    <string name="password">Password</string>
+    <string name="enter_the_email">Enter the Email</string>
+    <string name="email">Email</string>
+    <string name="login2">Login</string>
+    <string name="todo3">TODO3</string>
+    <string name="register">Register</string>
+    <string name="do_you_have_an_account_login">Do you have an account? LogIn</string>
+    <string name="enter_the_confirm_password">Enter the Confirm Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="enter_the_password1">Enter the Password</string>
+    <string name="password3">Password</string>
+    <string name="enter_the_email6">Enter the Email</string>
+    <string name="email8">Email</string>
+    <string name="enter_the_name9">Enter the Name</string>
+    <string name="name0">Name</string>
+    <string name="register8">Register</string>
+    <string name="logout">LogOut</string>
+    <string name="todo6">TODO</string>
+    <string name="profile">Profile</string>
+    <string name="todo78">TODO45</string>
+    <string name="todooo">TODOpp</string>
+    <string name="text68">CardName</string>
+    <string name="Vison" />
+    <string name="Coleges">Coleges\n</string>
+
+</resources>

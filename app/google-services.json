@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "228751732398",
+    "project_id": "vison-b6c63",
+    "storage_bucket": "vison-b6c63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228751732398:android:feb51d1a60db4ff9d8873f",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQleTxsjGgLvhpICDT6zKtpUDGL_FoaD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

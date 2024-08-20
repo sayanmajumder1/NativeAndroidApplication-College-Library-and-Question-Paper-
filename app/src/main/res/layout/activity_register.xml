@@ -1,0 +1,170 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/untitleddesignh">
+
+    <ImageView
+        android:layout_width="@dimen/dim_300"
+        android:layout_height="@dimen/dim_195"
+        android:layout_gravity="center"
+        android:contentDescription="@string/todo3"
+        android:src="@drawable/vih"
+        tools:ignore="VisualLintBounds" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="542dp"
+        android:background="@drawable/back"
+        android:orientation="vertical"
+        tools:ignore="TextSizeCheck,VisualLintBounds">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dim_10"
+            android:text="@string/register8"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            tools:ignore="VisualLintBounds" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_40"
+            android:layout_marginTop="@dimen/dim_10"
+            android:text="@string/name0"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck,VisualLintBounds" />
+
+        <EditText
+            android:id="@+id/fullName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_48"
+            android:layout_marginLeft="@dimen/dim_35"
+            android:layout_marginTop="@dimen/dim_7"
+            android:layout_marginRight="@dimen/dim_35"
+            android:autofillHints=""
+            android:background="@drawable/forget"
+            android:hint="@string/enter_the_name9"
+            android:inputType="text"
+            tools:ignore="VisualLintTextFieldSize,VisualLintBounds" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_40"
+            android:layout_marginTop="@dimen/dim_7"
+            android:text="@string/email8"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="VisualLintBounds" />
+
+        <EditText
+            android:id="@+id/Email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_48"
+            android:layout_marginLeft="@dimen/dim_35"
+            android:layout_marginTop="@dimen/dim_7"
+            android:layout_marginRight="@dimen/dim_35"
+            android:autofillHints=""
+            android:background="@drawable/forget"
+            android:hint="@string/enter_the_email6"
+            android:inputType="textEmailAddress"
+            tools:ignore="VisualLintTextFieldSize,VisualLintBounds" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_40"
+            android:layout_marginTop="@dimen/dim_7"
+            android:text="@string/password3"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck,VisualLintBounds" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_48"
+            android:layout_marginLeft="@dimen/dim_35"
+            android:layout_marginTop="@dimen/dim_7"
+            android:layout_marginRight="@dimen/dim_35"
+            android:autofillHints=""
+            android:background="@drawable/forget"
+            android:hint="@string/enter_the_password1"
+            android:inputType="textPassword"
+            tools:ignore="VisualLintTextFieldSize,VisualLintBounds" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_40"
+            android:layout_marginTop="@dimen/dim_7"
+            android:text="@string/confirm_password"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck,VisualLintBounds" />
+
+        <EditText
+            android:id="@+id/confirmPass"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_48"
+            android:layout_marginLeft="@dimen/dim_35"
+            android:layout_marginTop="@dimen/dim_7"
+            android:layout_marginRight="@dimen/dim_35"
+            android:autofillHints=""
+            android:background="@drawable/forget"
+            android:hint="@string/enter_the_confirm_password"
+            android:inputType="textPhonetic"
+            android:textColorHint="#757575"
+            tools:ignore="VisualLintTextFieldSize,VisualLintBounds" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="@dimen/dim_60"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/registerBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dim_10"
+            android:indeterminate="true"
+            android:indeterminateTint="#FF0000"
+            android:visibility="gone"
+            tools:ignore="ObsoleteLayoutParam" />
+
+        <Button
+            android:id="@+id/registerBtn"
+            android:layout_width="@dimen/dim_200"
+            android:layout_height="@dimen/dim_50"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dim_20"
+            android:background="@drawable/button"
+            android:text="@string/register"
+            android:textColor="#263238"
+            tools:ignore="DuplicateSpeakableTextCheck,VisualLintButtonSize,VisualLintBounds" />
+
+        <TextView
+            android:id="@+id/createText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim_32"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dim_10"
+            android:layout_marginBottom="@dimen/dim_30"
+            android:text="@string/do_you_have_an_account_login"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="VisualLintBounds" />
+    </LinearLayout>
+</LinearLayout>

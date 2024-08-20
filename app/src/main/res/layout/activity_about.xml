@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/untitleddesignh"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/todo78" />
+
+
+    <ImageButton
+        android:id="@+id/button7"
+        android:layout_width="@dimen/dim_46"
+        android:layout_height="@dimen/dim_34"
+        android:layout_marginTop="@dimen/dim_3"
+        android:layout_marginStart="@dimen/dim_16"
+        android:background="@null"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+    </ImageButton>
+
+    <ScrollView
+        android:layout_width="@dimen/dim_381"
+        android:layout_height="694dp"
+        android:layout_below="@+id/button7"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dim_13"
+        android:layout_marginBottom="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="ScrollViewSize,UseCompoundDrawables,UselessLeaf">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_192"
+                android:src="@drawable/u"
+                tools:ignore="ContentDescription">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="@dimen/dim_372"
+                android:layout_height="847dp"
+                android:layout_gravity="center"
+                android:text="@string/text9"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="TextSizeCheck,VisualLintLongText">
+
+            </TextView>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/untitleddesignh"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/todo78" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/dim_434"
+        android:layout_height="@dimen/dim_215"
+        android:contentDescription="TODO"
+        android:src="@drawable/vih"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.262"
+        tools:ignore="ContentDescription,HardcodedText,VisualLintBounds">
+
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="@dimen/dim_282"
+        android:layout_height="@dimen/dim_46"
+        android:layout_marginStart="@dimen/dim_16"
+        android:layout_marginTop="@dimen/dim_11"
+        android:layout_marginBottom="@dimen/dim_175"
+        android:text="From"
+        android:textAlignment="center"
+        android:textColor="#19031D"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.63"
+        tools:ignore="HardcodedText,MissingConstraints,TextSizeCheck,VisualLintBounds,VisualLintOverlap">
+
+    </TextView>
+
+    <ImageView
+        android:layout_width="@dimen/dim_181"
+        android:layout_height="@dimen/dim_169"
+        android:layout_marginBottom="@dimen/dim_104"
+        android:src="@drawable/u"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="@dimen/dim_92"
+        android:layout_height="@dimen/dim_76"
+
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

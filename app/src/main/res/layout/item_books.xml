@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/dim_5"
+    app:cardCornerRadius="@dimen/dim_7">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/dim_5"
+            app:cardCornerRadius="@dimen/dim_7"
+            android:layout_height="@dimen/dim_250"
+            app:cardElevation="@dimen/dim_10">
+            <ImageView
+                android:src="@drawable/downloads"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:id="@+id/book_cover"
+                tools:ignore="ContentDescription" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/book_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dim_10"
+            android:text="@string/_101_computer_fundamental"
+            android:textColor="#090909"
+            android:textSize="12sp"
+            tools:ignore="VisualLintBounds" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

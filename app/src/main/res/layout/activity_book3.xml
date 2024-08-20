@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookActivity3">
+    <ImageButton
+        android:id="@+id/button02"
+        android:layout_width="@dimen/dim_67"
+        android:layout_height="@dimen/dim_69"
+        android:background="@null"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteY="@dimen/dim_3">
+
+    </ImageButton>
+</androidx.constraintlayout.widget.ConstraintLayout>
