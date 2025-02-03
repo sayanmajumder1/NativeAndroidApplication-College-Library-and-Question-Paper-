@@ -6,7 +6,7 @@ Here’s a well-structured and visually appealing **README.md** file for your **
 
 > *Find Question Papers, Books, and Course Materials Effortlessly!*
 
-![Vision](![vih.png](..%2Fassets%2Fvih.png))
+![Vision](assets/vih.png)
 
 ---
 
