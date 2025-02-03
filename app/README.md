@@ -94,7 +94,7 @@ For any queries, feedback, or support, feel free to reach out:
 
 📧 **Email:** sayanmajumder566@gmail.com  
 🌐 **Website:** [Your Website](https://sayanmajumder1.github.io/Sayanmajumder-Portfolio/)  
-🐦 **Twitter:** [@yourusername](https://twitter.com/yourusername)
+🐦 **Twitter:** [@yourusername](https://x.com/Sayanmajum52059?t=QRPWZO7YIcCKABc3jqyf8w&s=09)
 
 ---
 
