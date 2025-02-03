@@ -37,6 +37,12 @@
     <string name="todooo">TODOpp</string>
     <string name="text68">CardName</string>
     <string name="Vison" />
-    <string name="Coleges">Coleges\n</string>
+    <string name="page_1">Page: 1</string>
+    <string name="devoloper">Sayan Majumder</string>
+    <string name="devoloper_detail">Devoloper Detail</string>
+    <string name="send">Send Email</string>
+ <string name="sayanmajumder566">sayanmajumder566@gmail.com</string>
+ <string name="developer2">Developer Image</string>
+ <string name="devoloperabout">About the Developer:- My name is Sayan Majumder, a passionate Android developer with over 2 years of hands-on experience in crafting user-friendly and efficient mobile applications. Currently, I am pursuing a Bachelor of Computer Applications (BCA) at the Burdwan Institute of Management and Computer Science, where I am honing my skills in software development, problem-solving, and emerging technologies. As a dedicated developer, I thrive on building applications that deliver seamless user experiences, employing cutting-edge tools and techniques in Android development. I have a strong foundation in Java, Kotlin, Flutter, and mobile architecture, with a focus on clean, maintainable, and scalable code. When I\'m not coding, I’m exploring new technologies and enhancing my expertise to deliver innovative solutions. My journey in Android development reflects my commitment to providing high-quality applications that meet user needs and industry standards.</string>
 
 </resources>

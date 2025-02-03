@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-
     <item
         android:id="@+id/nav_Profile"
         android:title="@string/profile"
         android:icon="@drawable/baseline_account_circle_24"
         />
     <item
-        android:id="@+id/nav_Coleges"
-        android:title="@string/Coleges"
-        android:icon="@drawable/sharp_account_balance_24"
+        android:id="@+id/nav_Devoloper"
+        android:title="@string/devoloper_detail"
+        android:icon="@drawable/outline_adb_24"
         />
     <item
         android:id="@+id/nav_about"

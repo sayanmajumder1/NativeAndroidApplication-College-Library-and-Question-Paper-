@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Profile">
 
+    <!-- Background Image -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,6 +14,8 @@
         android:scaleType="centerCrop"
         android:src="@drawable/untitleddesignh"
         tools:ignore="ImageContrastCheck" />
+
+    <!-- Back Button -->
     <ImageButton
         android:id="@+id/button090"
         android:layout_width="@dimen/dim_67"
@@ -23,62 +26,70 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck"
-        tools:layout_editor_absoluteY="@dimen/dim_3">
+        tools:layout_editor_absoluteY="@dimen/dim_3" />
 
-    </ImageButton>
-
-
-    <ImageView
-        android:id="@+id/src"
-        android:layout_width="@dimen/dim_250"
-        android:layout_height="@dimen/dim_250"
-        android:layout_marginTop="@dimen/dim_80"
-        android:contentDescription="@string/todo6"
-        android:src="@drawable/j"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ImageContrastCheck" />
-
-    <TextView
-        android:id="@+id/mName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dim_60"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/src" />
-
-    <TextView
-        android:id="@+id/mEmail2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dim_36"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mName" />
-
-    <Button
-        android:id="@+id/LoginBtn2"
-        android:layout_width="@dimen/dim_250"
-        android:layout_height="@dimen/dim_60"
-        android:layout_marginBottom="@dimen/dim_172"
-        android:background="@drawable/button"
-        android:text="@string/logout"
-        android:textColor="#0D47A1"
-        android:textSize="20sp"
+    <!-- CardView wrapping the profile section -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="363dp"
+        android:layout_height="567dp"
+        android:layout_margin="@dimen/dim_20"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button090">
+
+        <!-- Content inside CardView -->
+        <LinearLayout
+            android:layout_width="369dp"
+            android:layout_height="612dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/dim_16">
+
+            <!-- Profile Image -->
+            <ImageView
+                android:id="@+id/src"
+                android:layout_width="@dimen/dim_250"
+                android:layout_height="@dimen/dim_250"
+                android:layout_marginTop="@dimen/dim_20"
+                android:contentDescription="@string/todo6"
+                android:src="@drawable/j"
+                tools:ignore="ImageContrastCheck" />
+
+            <!-- Name Text -->
+            <TextView
+                android:id="@+id/mName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_16"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Email Text -->
+            <TextView
+                android:id="@+id/mEmail2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_8"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Logout Button -->
+            <Button
+                android:id="@+id/LoginBtn2"
+                android:layout_width="311dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="@dimen/dim_32"
+                android:background="@drawable/button"
+                android:text="@string/logout"
+                android:textColor="#0D47A1"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

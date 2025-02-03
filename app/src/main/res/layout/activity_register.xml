@@ -4,8 +4,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/untitleddesignh">
-
+        android:background="@drawable/untitleddesignh"
+    tools:ignore="Overdraw">
     <ImageView
         android:layout_width="@dimen/dim_300"
         android:layout_height="@dimen/dim_195"
@@ -13,14 +13,12 @@
         android:contentDescription="@string/todo3"
         android:src="@drawable/vih"
         tools:ignore="VisualLintBounds" />
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="542dp"
+        android:layout_height="620dp"
         android:background="@drawable/back"
         android:orientation="vertical"
         tools:ignore="TextSizeCheck,VisualLintBounds">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,6 +52,8 @@
             android:background="@drawable/forget"
             android:hint="@string/enter_the_name9"
             android:inputType="text"
+            android:paddingLeft="16dp"
+        android:paddingRight="16dp"
             tools:ignore="VisualLintTextFieldSize,VisualLintBounds" />
 
         <TextView
@@ -78,6 +78,8 @@
             android:background="@drawable/forget"
             android:hint="@string/enter_the_email6"
             android:inputType="textEmailAddress"
+            android:paddingLeft="16dp"
+        android:paddingRight="16dp"
             tools:ignore="VisualLintTextFieldSize,VisualLintBounds" />
 
         <TextView
@@ -102,6 +104,8 @@
             android:background="@drawable/forget"
             android:hint="@string/enter_the_password1"
             android:inputType="textPassword"
+            android:paddingLeft="16dp"
+        android:paddingRight="16dp"
             tools:ignore="VisualLintTextFieldSize,VisualLintBounds" />
 
         <TextView
@@ -126,6 +130,8 @@
             android:background="@drawable/forget"
             android:hint="@string/enter_the_confirm_password"
             android:inputType="textPhonetic"
+            android:paddingLeft="16dp"
+        android:paddingRight="16dp"
             android:textColorHint="#757575"
             tools:ignore="VisualLintTextFieldSize,VisualLintBounds" />
 

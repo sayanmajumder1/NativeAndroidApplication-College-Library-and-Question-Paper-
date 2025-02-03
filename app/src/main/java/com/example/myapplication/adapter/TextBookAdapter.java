@@ -48,10 +48,12 @@ public class TextBookAdapter extends RecyclerView.Adapter<TextBookAdapter.TextBo
         return list.size();
     }
 
+    /** @noinspection unused*/
     public static  class TextBoooksHolder extends RecyclerView.ViewHolder {
 
         final TextView chapterName;
         final TextView chapter;
+        /** @noinspection unused*/
         public TextBoooksHolder(@NonNull View itemView) {
             super(itemView);
             chapterName=itemView.findViewById(R.id.textBookchapterName);

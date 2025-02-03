@@ -1,24 +1,21 @@
 package com.example.myapplication;
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.widget.ImageButton;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.myapplication.adapter.BookAdapter;
 import com.example.myapplication.models.Books;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
 public class three extends AppCompatActivity {
     private final List<Books> list = new ArrayList<>();
     RecyclerView recyclerView;
@@ -26,7 +23,7 @@ public class three extends AppCompatActivity {
     ImageButton button;
     @SuppressLint("MissingInflatedId")
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_three);
         button=findViewById(R.id.button3);
@@ -34,11 +31,8 @@ public class three extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyle35);
         bookAdapter = new BookAdapter(list,three.this);
         recyclerView.setAdapter(bookAdapter);
-
 loadData();
-
     }
-
     private void loadData() {
         FirebaseDatabase.getInstance().getReference()
                 .child("books")
@@ -49,37 +43,19 @@ loadData();
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         list.clear();
                         bookAdapter.notifyDataSetChanged();
-
                         for(DataSnapshot dataSnapshot: snapshot.getChildren()){
-
                             String title = Objects.requireNonNull(dataSnapshot.child("title").getValue()).toString();
                             String cover = Objects.requireNonNull(dataSnapshot.child("cover").getValue()).toString();
                             String content = Objects.requireNonNull(dataSnapshot.child("content").getValue()).toString();
                             String type = Objects.requireNonNull(dataSnapshot.child("type").getValue()).toString();
-
                             list.add(new Books(title, cover, content , type));
                             bookAdapter.notifyDataSetChanged();
-
-
-
-
-
-
-
-
                         }
-
+                        new Handler(Looper.getMainLooper()).post(() -> bookAdapter.notifyDataSetChanged());
                     }
-
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-
                     }
                 });
-
-
-
-
-
     }
 }

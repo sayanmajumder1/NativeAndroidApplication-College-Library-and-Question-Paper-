@@ -4,25 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@drawable/untitleddesignh">
-
-
-
-
+    android:background="@drawable/untitleddesignh"
+    tools:ignore="Overdraw">
     <ImageView android:layout_width="@dimen/dim_300"
         android:layout_height="@dimen/dim_200"
         android:src="@drawable/vih"
         android:layout_gravity="center"
         android:contentDescription="@string/todo2"
         tools:ignore="VisualLintBounds" />
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="538dp"
+        android:layout_height="627dp"
         android:background="@drawable/back"
         android:orientation="vertical"
         tools:ignore="TextSizeCheck,VisualLintBounds">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,7 +27,6 @@
             android:textColor="@color/black"
             android:textSize="35sp"
             android:textStyle="bold" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,7 +36,6 @@
             android:textColor="#000"
             android:textSize="18sp"
             android:textStyle="bold" />
-
         <EditText
             android:id="@+id/Email"
             android:layout_width="match_parent"
@@ -53,9 +46,10 @@
             android:autofillHints=""
             android:background="@drawable/forget"
             android:hint="@string/enter_the_email"
+            android:paddingLeft="16dp"
+        android:paddingRight="16dp"
             android:inputType="textEmailAddress"
             tools:ignore="VisualLintTextFieldSize" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,7 +59,6 @@
             android:textColor="#000"
             android:textSize="18sp"
             android:textStyle="bold" />
-
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
@@ -77,6 +70,8 @@
             android:background="@drawable/forget"
             android:hint="@string/enter_the_password"
             android:inputType="textPassword"
+            android:paddingLeft="16dp"
+        android:paddingRight="16dp"
             tools:ignore="VisualLintTextFieldSize" />
 
         <TextView

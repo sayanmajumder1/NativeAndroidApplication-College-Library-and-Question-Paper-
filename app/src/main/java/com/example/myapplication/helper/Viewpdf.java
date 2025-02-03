@@ -16,6 +16,7 @@ public class Viewpdf {
     @SuppressLint("StaticFieldLeak")
     static PDFPagerAdapter pagerAdapter;
     RemotePDFViewPager  remotePDFViewPager;
+    /** @noinspection unused*/
     public Viewpdf(String url, LinearLayout pdflayout , ProgressBar loader, Activity activity) {
 
         DownloadFile.Listener listener=new DownloadFile.Listener() {

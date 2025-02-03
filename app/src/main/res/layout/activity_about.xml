@@ -11,8 +11,6 @@
         android:src="@drawable/untitleddesignh"
         android:scaleType="centerCrop"
         android:contentDescription="@string/todo78" />
-
-
     <ImageButton
         android:id="@+id/button7"
         android:layout_width="@dimen/dim_46"
@@ -29,7 +27,6 @@
         tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck">
 
     </ImageButton>
-
     <ScrollView
         android:layout_width="@dimen/dim_381"
         android:layout_height="694dp"
@@ -38,7 +35,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="@dimen/dim_13"
         android:layout_marginBottom="0dp">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -48,23 +44,23 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dim_192"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/image_border"
+                android:scaleType="centerCrop"
                 android:src="@drawable/u"
-                tools:ignore="ContentDescription">
-
-            </ImageView>
+                tools:ignore="ContentDescription" />
 
             <TextView
-                android:layout_width="@dimen/dim_372"
-                android:layout_height="847dp"
-                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/text9"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                tools:ignore="TextSizeCheck,VisualLintLongText">
-
+                android:textSize="18sp"
+                android:padding="16dp"
+                android:lineSpacingExtra="4dp"
+                android:gravity="center"
+                tools:ignore="TextSizeCheck,VisualLintLongText"     >
             </TextView>
-
-
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

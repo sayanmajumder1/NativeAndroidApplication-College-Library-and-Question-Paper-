@@ -1,5 +1,6 @@
 package com.example.myapplication.models;
 
+/** @noinspection unused*/
 public class TextBook {
     private final   String chapterName;
     private final String    chapter;

@@ -17,106 +17,91 @@ import com.example.myapplication.models.TextBook;
 
 import java.util.ArrayList;
 import java.util.List;
-//this Detail Activity Is created For Show All Chapter And contents Of All Books
+
+// This Detail Activity is created to show all chapters and contents of all books
 public class DetailActivity extends AppCompatActivity {
-/** @noinspection unused*/
-String title, content, type, /** @noinspection unused*/
-    cover;
+    String title, content, type, cover;
+    TextBookAdapter adapter;
+    private final List<TextBook> list = new ArrayList<>();
+    ViewPager2 viewPager2;
+    LinearLayout linearLayout;
+    ProgressBar loader;
 
-
-
-TextBookAdapter adapter;
-    private final List<TextBook>list = new ArrayList<>();
-ViewPager2 viewPager2;
-LinearLayout linearLayout;
-ProgressBar loader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
                 WindowManager.LayoutParams.FLAG_SECURE);
 
-        Bundle bundle= getIntent().getExtras();
+        Bundle bundle = getIntent().getExtras();
         assert bundle != null;
-        title= bundle.getString("title");
+        title = bundle.getString("title");
         content = bundle.getString("content");
         type = bundle.getString("type");
         cover = bundle.getString("cover");
-//Implement Logic For The Detail Activity To show The Pdf
 
-linearLayout = findViewById(R.id.pdfViewer1);
-loader= findViewById(R.id.pdf_loader1);
-viewPager2 = findViewById(R.id.text_book);
-
-if(type.contains("text")){
-
-    linearLayout.setVisibility(View.GONE);
-    loader.setVisibility(View.GONE);
-    viewPager2.setVisibility(View.VISIBLE);
-    initText();
-}else{
-    linearLayout.setVisibility(View.VISIBLE);
-    loader.setVisibility(View.VISIBLE);
-    viewPager2.setVisibility(View.GONE);
-
-new Viewpdf(content, linearLayout,loader,DetailActivity.this);
+        // Implement logic for the Detail Activity to show the PDF
+        linearLayout = findViewById(R.id.pdfViewer1);
+        loader = findViewById(R.id.pdf_loader1);
+        viewPager2 = findViewById(R.id.text_book);
 
 
-}
-
-
-
+        if (type.contains("text")) {
+            linearLayout.setVisibility(View.GONE);
+            loader.setVisibility(View.GONE);
+            viewPager2.setVisibility(View.VISIBLE);
+            initText();
+        } else {
+            linearLayout.setVisibility(View.VISIBLE);
+            loader.setVisibility(View.VISIBLE);
+            viewPager2.setVisibility(View.GONE);
+            new Viewpdf(content, linearLayout, loader, DetailActivity.this);
+        }
     }
 
-    @SuppressLint("NotifyDataSetChanged")
+    @SuppressLint({"NotifyDataSetChanged", "SetTextI18n"})
     private void initText() {
-        viewPager2 = findViewById(R.id.text_book);
         adapter = new TextBookAdapter(list, DetailActivity.this);
         viewPager2.setAdapter(adapter);
-//Break Point  For Chapter  Of All Books Using Tilda
-if(content.contains("~~")){
+        viewPager2.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);  // Set horizontal orientation
 
-    String[] data = content.split("~~");
-
-    for (String datum : data) {
-
-        String chapterName = datum.split("~")[0];
-        String chapterContent = datum.split("~")[1];
-list.add(new TextBook(chapterName,chapterContent));
-adapter.notifyDataSetChanged();
-
-    }
-}else{
+        // Add PageChangeCallback to update the page number
 
 
-    if(content.contains("~")){
+        // Breakpoint for chapters of all books using the tilde symbol (~)
+        if (content.contains("~~")) {
+            String[] data = content.split("~~");
+            for (String datum : data) {
+                String[] chapterData = datum.split("~");
+                if (chapterData.length == 2) {
+                    String chapterName = chapterData[0];
+                    String chapterContent = chapterData[1];
+                    list.add(new TextBook(chapterName, chapterContent));
+                }
+            }
+        } else if (content.contains("~")) {
+            String[] chapterData = content.split("~");
+            if (chapterData.length == 2) {
+                String chapterName = chapterData[0];
+                String chapterContent = chapterData[1];
+                list.add(new TextBook(chapterName, chapterContent));
+            }
+        }
 
-        String chapterName = content.split("~")[0];
-        String chapterContent = content.split("~")[1];
-        list.add(new TextBook(chapterName,chapterContent));
+        // Notify adapter that the dataset has changed
         adapter.notifyDataSetChanged();
-
-
-
-    }
-
-}
-
-
-
+        // Set the initial page number
 
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-if(type.contains("pdf")){
-        Viewpdf.stopPdf();
-
-}
+        if (type.contains("pdf")) {
+            Viewpdf.stopPdf();
+        }
     }
 }
