@@ -6,7 +6,7 @@ Here’s a well-structured and visually appealing **README.md** file for your **
 
 > *Find Question Papers, Books, and Course Materials Effortlessly!*
 
-![Vision App Banner](drawable/vih.png)
+![Vision](assets/vih.png)
 
 ---
 
@@ -93,8 +93,8 @@ We welcome contributions! If you’d like to improve Vision, follow these steps:
 For any queries, feedback, or support, feel free to reach out:
 
 📧 **Email:** sayanmajumder566@gmail.com  
-🌐 **Website:** [Your Website](https://sayanmajumder1.github.io/Sayanmajumder-Portfolio/)  
-🐦 **Twitter:** [@yourusername](https://x.com/Sayanmajum52059?t=QRPWZO7YIcCKABc3jqyf8w&s=09)
+🌐 **Website:** [My WebSite](https://sayanmajumder1.github.io/Sayanmajumder-Portfolio/)  
+🐦 **Twitter:** [Sayan Majumder](https://x.com/Sayanmajum52059?t=QRPWZO7YIcCKABc3jqyf8w&s=09)
 
 ---
 
