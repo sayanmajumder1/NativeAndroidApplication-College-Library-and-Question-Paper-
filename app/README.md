@@ -6,7 +6,7 @@ Here’s a well-structured and visually appealing **README.md** file for your **
 
 > *Find Question Papers, Books, and Course Materials Effortlessly!*
 
-![Vision](assets/vih.png)
+![Vision](![vih.png](..%2Fassets%2Fvih.png))
 
 ---
 
@@ -99,7 +99,3 @@ For any queries, feedback, or support, feel free to reach out:
 ---
 
 ### 🌟 **If you find Vision useful, don’t forget to give it a star ⭐ on GitHub!**
-
----
-
-This README follows a clean and structured format. You can replace the **assets/images** with actual screenshots and update the **download link** accordingly. Let me know if you need any modifications! 🚀
