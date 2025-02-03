@@ -1,5 +1,4 @@
 package com.example.myapplication.helper;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.view.View;
