@@ -52,9 +52,6 @@ public static void  stopPdf(){
 
         }
 
-
-
-
 }
     private void refreshLayout(LinearLayout pdflayout) {
 
