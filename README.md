@@ -29,15 +29,15 @@ Here’s the updated table with the additional sections:
 
 | Developer Section | About Section | Search Section |  
 |------------------|--------------|----------------|  
-| ![Developer](assets/devoloperinformation.png)| ![About](assets/about.png) | ![Search](assets/search.png) |  
+| ![Developer](assets/devoloperinformation.png)| ![About](assets/aboutsection.png) | ![Search](assets/search.png) |  
 
 | App Logo Section | Splash Screen | Profile Section |  
 |-----------------|--------------|----------------|  
 | ![Logo](assets/v.png) | ![Splash](assets/splash.png) | ![Profile](assets/profile.png) |  
 
-| Books Pages |  
-|------------|  
-| ![Books Pages](assets/bookspage.png) |  
+| Books Pages |Drawer | 
+|------------|----------|  
+| ![Books Pages](assets/bookspage.png) |  [App Drawer]( assets/drawer.png) |
 
 
 ---
