@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-Here’s a well-structured and visually appealing **README.md** file for your **Vision** Android application.
-
----
 
 # **📘 Vision - Your Ultimate Study Companion**
 
@@ -24,9 +20,9 @@ Here’s a well-structured and visually appealing **README.md** file for your **
 
 ## 🖥️ **Screenshots**
 
-| Home Screen | Categories | Book Details |
-|------------|-----------|-------------|
-| ![Home](assets/home.png) | ![Categories](assets/categories.png) | ![Details](assets/details.png) |
+| Home Screen | Categories                      | Book Details                        |
+|------------|---------------------------------|-------------------------------------|
+| ![Home](assets/home.png) | ![Categories](assets/books.png) | ![Details](assets/bookssection.png) |
 
 ---
 
@@ -100,6 +96,3 @@ For any queries, feedback, or support, feel free to reach out:
 
 ### 🌟 **If you find Vision useful, don’t forget to give it a star ⭐ on GitHub!**
 =======
-
-
->>>>>>> origin/main
