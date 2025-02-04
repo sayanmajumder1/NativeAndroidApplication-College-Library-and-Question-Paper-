@@ -37,7 +37,7 @@ Here’s the updated table with the additional sections:
 
 | Books Pages |Drawer | 
 |------------|----------|  
-| ![Books Pages](assets/bookspage.png) |  [App Drawer]( assets/drawer.png) |
+| ![Books Pages](assets/bookspage.png) |  [App Drawer](assets/drawer.png) |
 
 
 ---
