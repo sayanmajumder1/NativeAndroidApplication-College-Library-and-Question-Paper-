@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+Here’s a well-structured and visually appealing **README.md** file for your **Vision** Android application.
+
+---
 
 # **📘 Vision - Your Ultimate Study Companion**
 
@@ -6,6 +10,7 @@
 ![Vision](assets/vih.png)
 
 ---
+
 ## 📖 **About Vision**
 
 **Vision** is a powerful Android application designed to provide students with **question papers, books, and course materials** based on their academic needs. Whether you’re preparing for exams or looking for reference materials, Vision ensures you have access to the right resources at your fingertips.
@@ -19,9 +24,9 @@
 
 ## 🖥️ **Screenshots**
 
-| Home Screen | Categories                      | Book Details                        |
-|------------|---------------------------------|-------------------------------------|
-| ![Home](assets/home.png) | ![Categories](assets/books.png) | ![Details](assets/bookssection.png) |
+| Home Screen | Categories | Book Details |
+|------------|-----------|-------------|
+| ![Home](assets/home.png) | ![Categories](assets/categories.png) | ![Details](assets/details.png) |
 
 ---
 
@@ -95,3 +100,6 @@ For any queries, feedback, or support, feel free to reach out:
 
 ### 🌟 **If you find Vision useful, don’t forget to give it a star ⭐ on GitHub!**
 =======
+
+
+>>>>>>> origin/main
