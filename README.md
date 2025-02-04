@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-Here’s a well-structured and visually appealing **README.md** file for your **Vision** Android application.
 
 ---
 
@@ -102,4 +100,3 @@ For any queries, feedback, or support, feel free to reach out:
 =======
 
 
->>>>>>> origin/main
