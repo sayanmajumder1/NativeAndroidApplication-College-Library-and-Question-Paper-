@@ -22,9 +22,9 @@
 
 ## 🖥️ **Screenshots**
 
-| Home Screen | Categories | Book Details |
-|------------|-----------|-------------|
-| ![Home](assets/home.png) | ![Categories](assets/categories.png) | ![Details](assets/details.png) |
+| Home Screen | Categories                             | Book Details                 |
+|------------|----------------------------------------|------------------------------|
+| ![Home](assets/home.png) | ![Categories](assets/bookssection.png) | ![Details](assets/books.png) |
 
 ---
 
