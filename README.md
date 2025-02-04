@@ -75,9 +75,9 @@ Scan the QR Code to download:
 ---
 
 ## 🛠️ **Tech Stack**
-🔹 **Language:** Java/Kotlin  
+🔹 **Language:** Java
 🔹 **Framework:** Android SDK  
-🔹 **Database:** Firebase/SQLite (if applicable)  
+🔹 **Database:** Firebase
 🔹 **UI:** Material Design
 
 ---
