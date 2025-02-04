@@ -21,10 +21,24 @@
 ---
 
 ## 🖥️ **Screenshots**
+Here’s the updated table with the additional sections:
 
-| Home Screen | Categories                             | Book Details                 |
-|------------|----------------------------------------|------------------------------|
-| ![Home](assets/home.png) | ![Categories](assets/bookssection.png) | ![Details](assets/books.png) |
+| Home Screen | Categories                             | Book Details                 |  
+|------------|----------------------------------------|------------------------------|  
+| ![Home](assets/home.png) | ![Categories](assets/bookssection.png) | ![Details](assets/books.png) |  
+
+| Developer Section | About Section | Search Section |  
+|------------------|--------------|----------------|  
+| ![Developer](assets/developerinformation.png)| ![About](assets/about.png) | ![Search](assets/search.png) |  
+
+| App Logo Section | Splash Screen | Profile Section |  
+|-----------------|--------------|----------------|  
+| ![Logo](assets/v.png) | ![Splash](assets/splash.png) | ![Profile](assets/profile.png) |  
+
+| Books Pages |  
+|------------|  
+| ![Books Pages](assets/bookspages.png) |  
+
 
 ---
 
