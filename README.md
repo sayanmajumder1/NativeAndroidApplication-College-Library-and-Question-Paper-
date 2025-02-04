@@ -29,7 +29,7 @@ Here’s the updated table with the additional sections:
 
 | Developer Section | About Section | Search Section |  
 |------------------|--------------|----------------|  
-| ![Developer](assets/developerinformation.png)| ![About](assets/about.png) | ![Search](assets/search.png) |  
+| ![Developer](assets/devoloperinformation.png)| ![About](assets/about.png) | ![Search](assets/search.png) |  
 
 | App Logo Section | Splash Screen | Profile Section |  
 |-----------------|--------------|----------------|  
@@ -37,7 +37,7 @@ Here’s the updated table with the additional sections:
 
 | Books Pages |  
 |------------|  
-| ![Books Pages](assets/bookspages.png) |  
+| ![Books Pages](assets/bookspage.png) |  
 
 
 ---
