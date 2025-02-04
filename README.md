@@ -34,7 +34,7 @@ Here’s the updated table with the additional sections:
 | App Logo Section | Splash Screen | Profile Section |  
 |-----------------|--------------|----------------|  
 | ![Logo](assets/v.png) | ![Splash](assets/splash.png) | ![Profile](assets/profile.png) |  
-Here's the corrected table with proper formatting:
+
 
 | Books Pages      | Drawer          |  
 |------------------|----------------|  
@@ -50,7 +50,7 @@ Click the link below to download the latest APK file:
 OR
 
 Scan the QR Code to download:  
-![QR Code](assets/qrcode.png)
+![QR Code](assets/Untitled.png)
 
 ---
 
