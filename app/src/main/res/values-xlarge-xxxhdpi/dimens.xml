@@ -1,5 +1,5 @@
 <?xml version="1.0"  ?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <dimen name="dim_3">9dp</dimen>
     <dimen name="dim_5">15dp</dimen>
     <dimen name="dim_6">18dp</dimen>
@@ -15,7 +15,7 @@
     <dimen name="dim_32">96dp</dimen>
     <dimen name="dim_34">102dp</dimen>
     <dimen name="dim_35">105dp</dimen>
-    <dimen name="dim_36">108dp</dimen>
+    <dimen name="dim_36" tools:ignore="MissingDefaultResource">108dp</dimen>
     <dimen name="dim_40">120dp</dimen>
     <dimen name="dim_46">138dp</dimen>
     <dimen name="dim_48">144dp</dimen>
@@ -24,13 +24,13 @@
     <dimen name="dim_67">201dp</dimen>
     <dimen name="dim_69">207dp</dimen>
     <dimen name="dim_76">228dp</dimen>
-    <dimen name="dim_80">240dp</dimen>
+    <dimen name="dim_80" tools:ignore="MissingDefaultResource">240dp</dimen>
     <dimen name="dim_92">276dp</dimen>
     <dimen name="dim_104">312dp</dimen>
     <dimen name="dim_108">324dp</dimen>
     <dimen name="dim_160">480dp</dimen>
     <dimen name="dim_169">507dp</dimen>
-    <dimen name="dim_172">516dp</dimen>
+    <dimen name="dim_172" tools:ignore="MissingDefaultResource">516dp</dimen>
     <dimen name="dim_175">525dp</dimen>
     <dimen name="dim_181">543dp</dimen>
     <dimen name="dim_192">576dp</dimen>
@@ -41,9 +41,9 @@
     <dimen name="dim_282">846dp</dimen>
     <dimen name="dim_300">900dp</dimen>
     <dimen name="dim_350">1050dp</dimen>
-    <dimen name="dim_372">1116dp</dimen>
+    <dimen name="dim_372" tools:ignore="MissingDefaultResource">1116dp</dimen>
     <dimen name="dim_378">1134dp</dimen>
-    <dimen name="dim_379">1137dp</dimen>
+    <dimen name="dim_379" tools:ignore="MissingDefaultResource">1137dp</dimen>
     <dimen name="dim_381">1143dp</dimen>
     <dimen name="dim_398">1194dp</dimen>
     <dimen name="dim_434">1302dp</dimen>

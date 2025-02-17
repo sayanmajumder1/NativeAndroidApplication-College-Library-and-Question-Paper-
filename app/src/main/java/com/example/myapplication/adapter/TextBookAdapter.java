@@ -14,6 +14,9 @@ import com.example.myapplication.models.TextBook;
 
 import java.util.List;
 
+/**
+ * @noinspection unused
+ */
 public class TextBookAdapter extends RecyclerView.Adapter<TextBookAdapter.TextBoooksHolder> {
     private final List<TextBook> list;
      /** @noinspection unused*/

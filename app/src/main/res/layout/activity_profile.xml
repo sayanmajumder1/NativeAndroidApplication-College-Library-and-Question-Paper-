@@ -15,50 +15,65 @@
         android:src="@drawable/untitleddesignh"
         tools:ignore="ImageContrastCheck" />
 
-    <!-- Back Button -->
-    <ImageButton
-        android:id="@+id/button090"
-        android:layout_width="@dimen/dim_67"
-        android:layout_height="@dimen/dim_69"
-        android:background="@null"
-        android:src="@drawable/baseline_arrow_back_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck"
-        tools:layout_editor_absoluteY="@dimen/dim_3" />
-
     <!-- CardView wrapping the profile section -->
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="413dp"
+        android:layout_height="58dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints,VisualLintBounds">
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/button090"
+            android:layout_width="@dimen/dim_67"
+            android:layout_height="@dimen/dim_69"
+            android:background="@null"
+            android:src="@drawable/baseline_arrow_back_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintBounds"
+            tools:layout_editor_absoluteY="@dimen/dim_3" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
     <androidx.cardview.widget.CardView
-        android:layout_width="363dp"
-        android:layout_height="567dp"
+        android:layout_width="352dp"
+        android:layout_height="564dp"
         android:layout_margin="@dimen/dim_20"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button090">
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar">
 
         <!-- Content inside CardView -->
         <LinearLayout
-            android:layout_width="369dp"
-            android:layout_height="612dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:orientation="vertical"
             android:padding="@dimen/dim_16">
 
             <!-- Profile Image -->
+
+            <!-- Name Text -->
+
             <ImageView
-                android:id="@+id/src"
                 android:layout_width="@dimen/dim_250"
-                android:layout_height="@dimen/dim_250"
+                android:layout_height="174dp"
                 android:layout_marginTop="@dimen/dim_20"
                 android:contentDescription="@string/todo6"
                 android:src="@drawable/j"
-                tools:ignore="ImageContrastCheck" />
+                tools:ignore="ImageContrastCheck,VisualLintBounds" />
 
-            <!-- Name Text -->
             <TextView
                 android:id="@+id/mName"
                 android:layout_width="wrap_content"
@@ -82,7 +97,7 @@
             <Button
                 android:id="@+id/LoginBtn2"
                 android:layout_width="311dp"
-                android:layout_height="58dp"
+                android:layout_height="67dp"
                 android:layout_marginTop="@dimen/dim_32"
                 android:background="@drawable/button"
                 android:text="@string/logout"

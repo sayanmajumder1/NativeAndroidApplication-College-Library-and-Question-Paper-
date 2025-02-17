@@ -1,11 +1,14 @@
 package com.example.myapplication.activity;
 
+import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
@@ -18,24 +21,26 @@ import com.example.myapplication.models.TextBook;
 import java.util.ArrayList;
 import java.util.List;
 
-// This Detail Activity is created to show all chapters and contents of all books
+// This DetailActivity is created to show all chapters and contents of all books
 public class DetailActivity extends AppCompatActivity {
-    String title, content, type, cover;
-    TextBookAdapter adapter;
     private final List<TextBook> list = new ArrayList<>();
-    ViewPager2 viewPager2;
-    LinearLayout linearLayout;
-    ProgressBar loader;
-
+     String title, content, type, cover;
+     TextBookAdapter adapter;
+     ViewPager2 viewPager2;
+     LinearLayout linearLayout;
+     ProgressBar loader;
+     TextView animatedText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        // Secure screen flag
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
                 WindowManager.LayoutParams.FLAG_SECURE);
 
+        // Retrieve data from intent
         Bundle bundle = getIntent().getExtras();
         assert bundle != null;
         title = bundle.getString("title");
@@ -43,12 +48,16 @@ public class DetailActivity extends AppCompatActivity {
         type = bundle.getString("type");
         cover = bundle.getString("cover");
 
-        // Implement logic for the Detail Activity to show the PDF
+        // Initialize UI components
         linearLayout = findViewById(R.id.pdfViewer1);
         loader = findViewById(R.id.pdf_loader1);
         viewPager2 = findViewById(R.id.text_book);
+        animatedText = findViewById(R.id.animatedText);
 
+        // Animate TextView (Swipe Left to Right)
+        startTextAnimation();
 
+        // Handle text or PDF content display
         if (type.contains("text")) {
             linearLayout.setVisibility(View.GONE);
             loader.setVisibility(View.GONE);
@@ -62,14 +71,21 @@ public class DetailActivity extends AppCompatActivity {
         }
     }
 
+    // Method to start animation
+    private void startTextAnimation() {
+        ObjectAnimator animator = ObjectAnimator.ofFloat(animatedText, "translationX", -800f, 800f);
+        animator.setDuration(2000); // 2 seconds animation
+        animator.setInterpolator(new AccelerateDecelerateInterpolator()); // Smooth effect
+        animator.setRepeatCount(ObjectAnimator.INFINITE); // Infinite loop
+        animator.setRepeatMode(ObjectAnimator.REVERSE); // Moves back and forth
+        animator.start(); // Start animation
+    }
+
     @SuppressLint({"NotifyDataSetChanged", "SetTextI18n"})
     private void initText() {
         adapter = new TextBookAdapter(list, DetailActivity.this);
         viewPager2.setAdapter(adapter);
         viewPager2.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);  // Set horizontal orientation
-
-        // Add PageChangeCallback to update the page number
-
 
         // Breakpoint for chapters of all books using the tilde symbol (~)
         if (content.contains("~~")) {
@@ -93,8 +109,6 @@ public class DetailActivity extends AppCompatActivity {
 
         // Notify adapter that the dataset has changed
         adapter.notifyDataSetChanged();
-        // Set the initial page number
-
     }
 
     @Override

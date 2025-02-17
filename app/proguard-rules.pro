@@ -9,6 +9,16 @@
     public *;
 }
 
+
+# Hide class names and method names (obfuscation)
+-renamesourcefileattribute SourceFile
+-keepattributes SourceFile,LineNumberTable
+
+# Optimize the class
+-optimizationpasses 5
+-allowaccessmodification
+
+
 # Keep resources and methods used by Activities
 -keepclassmembers class * extends android.app.Activity {
     public void onCreate(android.os.Bundle);

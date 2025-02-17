@@ -23,25 +23,25 @@
 ## 🖥️ **Screenshots**
 Here’s the updated table with the additional sections:
 
-| Home Screen | Categories                     | Book Details                 |  
-|------------|--------------------------------|------------------------------|  
+| Home Screen              | Categories                     | Book Details                 |  
+|--------------------------|--------------------------------|------------------------------|  
 | ![Home](assets/home.png) | ![Categories](assets/book.png) | ![Details](assets/books.png) |  
 
-| Developer Section | About Section | Search Section |  
-|------------------|--------------|----------------|  
-| ![Developer](assets/devoloperinformation.png)| ![About](assets/aboutsection.png) | ![Search](assets/search.png) |  
+| Developer Section                             | About Section                     | Search Section               |  
+|-----------------------------------------------|-----------------------------------|------------------------------|  
+| ![Developer](assets/devoloperinformation.png) | ![About](assets/aboutsection.png) | ![Search](assets/search.png) |  
 
-| App Logo Section | Splash Screen | Profile Section |  
-|-----------------|--------------|----------------|  
+| App Logo Section      | Splash Screen                | Profile Section                |  
+|-----------------------|------------------------------|--------------------------------|  
 | ![Logo](assets/v.png) | ![Splash](assets/splash.png) | ![Profile](assets/profile.png) |  
 
 
-| Books Pages      | Drawer          |  
-|------------------|----------------|  
-| ![Books Pages](assets/bookspage.png) | ![App Drawer](assets/drawer.png) |  
-| Login Section | Register Section |
-|--------------|------------------|
-| ![Login Section](assets/Login.png) | ![Register Section](assets/Register.png) |
+| Books Pages                          | Drawer                                   |  
+|--------------------------------------|------------------------------------------|  
+| ![Books Pages](assets/bookspage.png) | ![App Drawer](assets/drawer.png)         |  
+| Login Section                        | Register Section                         |
+| --------------                       | ------------------                       |
+| ![Login Section](assets/Login.png)   | ![Register Section](assets/Register.png) |
 
 
 ## 📲 **Download Vision**

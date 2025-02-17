@@ -1,20 +1,25 @@
 package com.example.myapplication;
+
 import android.content.Intent;
-import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
+import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager2.widget.ViewPager2;
+
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
-import com.google.firebase.messaging.FirebaseMessaging;
+
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout; // import  drawer layout , navigation view , toggle for side navigation bar, tab layout , tab-items , viewpager and fragment manger
     NavigationView navigationView;
@@ -22,10 +27,39 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     fragmentmaneger fragmentManeger;
+
+    //     EditText    editTextText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // FireBase Notification Setup Process Code
+//editTextText = findViewById(R.id.editTextText);
+//        FirebaseMessaging.getInstance().getToken()
+//                .addOnCompleteListener(task -> {
+//                    if (!task.isSuccessful()) {
+//                        System.out.println( "Fetching FCM registration token failed");
+//                        return;
+//                    }
+//
+//                    // Get new FCM registration token
+//                    String token = task.getResult();
+//
+//                    // Log and toast
+//
+//                    System.out.println(token);
+//                    Toast.makeText(MainActivity.this,"Your Registration Token Is "+token
+//                            , Toast.LENGTH_SHORT).show();
+//
+//                    editTextText.setText(token);
+//                });
+//
+//
+//
+//
+
+
         // For Toolbar
         Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -33,12 +67,17 @@ public class MainActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(""); // Set an empty string as the title
         }
+
+
         // Firebase Message  Method
-        FirebaseMessaging.getInstance().subscribeToTopic("Vision")
-                .addOnCompleteListener(task -> {
-                    String msg = task.isSuccessful() ? "Subscription successful" : "Subscription failed";
-                    Log.d("FirebaseMessaging", msg);
-                });
+        //     FirebaseMessaging.getInstance().subscribeToTopic("Vision")
+        //           .addOnCompleteListener(task -> {
+        //             String msg = task.isSuccessful() ? "Subscription successful" : "Subscription failed";
+        //           Log.d("FirebaseMessaging", msg);
+
+        //     });
+
+
 // implement and find the tab items
         tabLayout = findViewById(R.id.tab1);
         viewPager2 = findViewById(R.id.pageholder2);
@@ -80,12 +119,21 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < tabLayout.getTabCount(); i++) {
             TabLayout.Tab tab = tabLayout.getTabAt(i);
             if (tab != null) {
+                // Set text color
+                View tabView = ((ViewGroup) tabLayout.getChildAt(0)).getChildAt(i);
+                if (tabView instanceof TextView) {
+                    ((TextView) tabView).setTextColor(ContextCompat.getColor(this, R.color.white));
+                }
+
+                // Set icon tint
                 Drawable tabIcon = tab.getIcon();
                 if (tabIcon != null) {
-                    tabIcon.setColorFilter(ContextCompat.getColor(this, R.color.tabIconTint), PorterDuff.Mode.SRC_IN);
+                    tabIcon = DrawableCompat.wrap(tabIcon);
+                    DrawableCompat.setTint(tabIcon, ContextCompat.getColor(this, R.color.white));
                 }
             }
         }
+
 // Adding the selected listener For tabs to select particular tabs
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -94,11 +142,11 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
+                // TODO document why this method is empty
             }
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-
+                // TODO document why this method is empty
             }
         });
         viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
@@ -122,7 +170,15 @@ public class MainActivity extends AppCompatActivity {
              else if (itemId == R.id.nav_about){
                  Intent aboutIntent = new Intent(MainActivity.this, About.class);
                  startActivity(aboutIntent);
+             } else if (itemId == R.id.nav_message) {
+                 Intent messageIntent = new Intent(MainActivity.this, chatai.class);
+                 startActivity(messageIntent);
              }
+
+
+
+
+
             drawerLayout.closeDrawer(GravityCompat.START);
             return true;
         });

@@ -5,6 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BookActivity5">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo78"
+        android:scaleType="centerCrop"
+        android:src="@drawable/untitleddesignh"
+        tools:ignore="ImageContrastCheck" />
     <ImageButton
         android:id="@+id/button04"
         android:layout_width="@dimen/dim_67"
@@ -16,6 +23,24 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck"
         tools:layout_editor_absoluteY="@dimen/dim_3">
-
     </ImageButton>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyle40"
+        android:layout_width="@dimen/dim_398"
+        android:layout_height="668dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/dim_5"
+        android:layout_marginBottom="-5dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:spanCount="2"
+        tools:ignore="MissingConstraints"
+        tools:listitem="@layout/item_books" />
 </androidx.constraintlayout.widget.ConstraintLayout>

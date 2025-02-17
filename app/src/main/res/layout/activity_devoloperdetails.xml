@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/untitleddesignh"
     tools:context=".devoloperdetails"
-    android:id="@+id/main">
+    android:id="@+id/edittext"
+    tools:ignore="Overdraw">
 
     <!-- ScrollView for handling overflow -->
     <ScrollView
@@ -22,15 +23,15 @@
             <!-- Back Button -->
             <ImageButton
                 android:id="@+id/button711"
-                android:layout_width="24dp"
-                android:layout_height="41dp"
+                android:layout_width="28dp"
+                android:layout_height="43dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:background="@null"
                 android:src="@drawable/baseline_arrow_back_24"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="ContentDescription,ImageContrastCheck" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <!-- Developer Image -->
             <ImageView
@@ -39,7 +40,7 @@
                 android:layout_height="150dp"
                 android:layout_marginTop="32dp"
                 android:src="@drawable/devoloper"
-                android:contentDescription="@string/"
+                android:contentDescription="@string/hii"
                 android:scaleType="centerCrop"
                 android:background="@drawable/circle_background"
                 android:transitionName="developerImageTransition"
@@ -54,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/devoloper"
-                android:textColor="@color/black"
+                android:textColor="#5D4037"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -90,7 +91,8 @@
                 android:background="@drawable/rectangle"
                 app:layout_constraintTop_toBottomOf="@+id/developerEmail"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="VisualLintLongText" />
 
             <!-- Send Email Button -->
             <Button
@@ -100,11 +102,12 @@
                 android:layout_marginTop="16dp"
                 android:backgroundTint="@color/purple_500"
                 android:text="@string/send"
-                android:textColor="@android:color/white"
-                app:layout_constraintTop_toBottomOf="@+id/aboutDeveloper"
-                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="#FFCCBC"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aboutDeveloper"
+                tools:ignore="TextContrastCheck,TextContrastCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

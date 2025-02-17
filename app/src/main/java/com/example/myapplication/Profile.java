@@ -28,7 +28,7 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         button = findViewById(R.id.button090);
-        button.setOnClickListener(v -> finish());  // Closes the Profile activity
+        button.setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
 
         logout = findViewById(R.id.LoginBtn2);
         fullName = findViewById(R.id.mName);
@@ -60,18 +60,17 @@ public class Profile extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), Login.class));
             finish();
         });
-        // Handle back button using the OnBackPressedDispatcher
+
+        // Handle back button correctly
         OnBackPressedCallback callback = new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
-                // Custom back button behavior (e.g., close the activity)
-                finish();  // This will simply close the Profile activity
+                Intent intent = new Intent(Profile.this, MainActivity.class);  // Change this to your previous activity
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(intent);
+                finish();
             }
         };
-
-        // Add the callback to the back button dispatcher
         getOnBackPressedDispatcher().addCallback(this, callback);
     }
-
-
 }
