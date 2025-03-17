@@ -4,6 +4,15 @@
     <color name="white">#FFFFFFFF</color>
     <!-- Replace with your desired color -->
     <color name="tabIconTint"> #FFFFFF </color>
-    <color name="gray">#808080</color>
-    <color name="purple_500">#6200EE</color>
+    <color name="statusbar">#F4790C</color>
+    <color name="red">#FF0000</color>
+    <color name="buttonRipple">#B71C1C</color>
+
+
+    <!--   <gradient xmlns:android="http://schemas.android.com/apk/res/android"
+           android:angle="45"
+           android:startColor="#FF6B6B"
+           android:centerColor="#FFA726"
+           android:endColor="#42A5F5"
+           android:type="linear" />    -->
 </resources>

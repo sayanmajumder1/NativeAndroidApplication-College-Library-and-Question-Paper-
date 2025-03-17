@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true"
     android:fitsSystemWindows="true">
 
@@ -29,7 +30,9 @@
                 android:layout_height="46dp"
                 android:background="@null"
                 android:contentDescription="@string/todo"
-                android:src="@drawable/baseline_arrow_back_24"
+
+                app:tint="@android:color/white"
+                android:src="@drawable/baseline_arrow_back_ios_24"
                 tools:ignore="ImageContrastCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         </com.google.android.material.appbar.MaterialToolbar>
 

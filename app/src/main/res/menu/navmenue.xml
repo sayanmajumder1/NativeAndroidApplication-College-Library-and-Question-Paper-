@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+
+    >
     <item
         android:id="@+id/nav_Profile"
         android:title="@string/profile"
-        android:icon="@drawable/baseline_account_circle_24"
+        android:icon="@drawable/user"
         />
 
     <item
         android:id="@+id/nav_message"
         android:title="@string/chat_with_ai"
-        android:icon="@drawable/baseline_announcement_24"
+        android:icon="@drawable/message"
         />
 
 
@@ -21,11 +25,11 @@
     <item
         android:id="@+id/nav_Devoloper"
         android:title="@string/devoloper_detail"
-        android:icon="@drawable/outline_adb_24"
+        android:icon="@drawable/management"
         />
     <item
         android:id="@+id/nav_about"
         android:title="@string/text12"
-        android:icon="@drawable/round_report_24"
+        android:icon="@drawable/information"
         />
 </menu>

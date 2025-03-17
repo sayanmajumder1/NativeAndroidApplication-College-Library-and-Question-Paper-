@@ -1,38 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="@dimen/dim_5"
-    app:cardCornerRadius="@dimen/dim_7">
+    app:cardCornerRadius="@dimen/dim_7"
+    app:cardElevation="@dimen/dim_6"
+    android:background="?android:attr/selectableItemBackground">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/dim_8">
+
+        <!-- Image Card -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_margin="@dimen/dim_5"
-            app:cardCornerRadius="@dimen/dim_7"
             android:layout_height="@dimen/dim_250"
+            android:layout_marginBottom="@dimen/dim_8"
+            app:cardCornerRadius="@dimen/dim_7"
             app:cardElevation="@dimen/dim_10">
+
             <ImageView
-                android:src="@drawable/downloads"
+                android:id="@+id/book_cover"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:scaleType="centerCrop"
                 android:adjustViewBounds="true"
-                android:id="@+id/book_cover"
+
+                android:src="@drawable/downloads"
                 tools:ignore="ContentDescription" />
         </androidx.cardview.widget.CardView>
 
+        <!-- Book Title -->
         <TextView
             android:id="@+id/book_t"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dim_10"
+            android:layout_marginStart="@dimen/dim_10"
+            android:layout_marginEnd="@dimen/dim_10"
             android:text="@string/_101_computer_fundamental"
             android:textColor="#090909"
-            android:textSize="12sp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end"
             tools:ignore="VisualLintBounds" />
     </LinearLayout>
 

@@ -1,82 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".About">
-    <ImageView
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/untitleddesignh"
-        android:scaleType="centerCrop"
-        android:contentDescription="@string/todo78" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints,VisualLintBounds"
-        tools:layout_editor_absoluteY="0dp">
+        <!-- Header Section -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#F4790C"
+            android:paddingTop="50dp"
+            android:paddingBottom="30dp">
 
+            <!-- Back Button -->
+            <ImageButton
+                android:id="@+id/button7"
+                android:layout_width="46dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="3dp"
+                android:background="@null"
+                android:src="@drawable/baseline_arrow_back_ios_24"
+                app:tint="@android:color/white"
+                tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-        <ImageButton
-            android:id="@+id/button7"
-            android:layout_width="@dimen/dim_46"
-            android:layout_height="@dimen/dim_34"
-            android:layout_marginStart="@dimen/dim_16"
-            android:layout_marginTop="@dimen/dim_3"
-            android:background="@null"
-            android:src="@drawable/baseline_arrow_back_24"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintBounds">
+            <!-- Profile Image -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profile_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/u"
+                android:scaleType="centerCrop"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="@android:color/white"
+                app:shapeAppearanceOverlay="@style/CircleImageView" />
 
-        </ImageButton>
-    </com.google.android.material.appbar.MaterialToolbar>
-    <ScrollView
-        android:layout_width="@dimen/dim_381"
-        android:layout_height="694dp"
-        android:layout_below="@+id/button7"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="@dimen/dim_13"
-        android:layout_marginBottom="0dp"
-        tools:ignore="NotSibling">
+            <!-- Username -->
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/start_name"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <!-- Website Link -->
+            <TextView
+                android:id="@+id/website_link"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:layout_below="@id/username"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-1dp"
+                android:layout_marginEnd="0dp"
+                android:clickable="true"
+                android:ellipsize="end"
+                android:focusable="true"
+                android:gravity="center"
+                android:maxLines="1"
+                android:minHeight="49dp"
+                android:text="@string/developer_website"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck,TextSizeCheck" />
+        </RelativeLayout>
+
+        <!-- Account Info Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            tools:ignore="ScrollViewSize,UseCompoundDrawables,UselessLeaf">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dim_192"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/image_border"
-                android:scaleType="centerCrop"
-                android:src="@drawable/u"
-                tools:ignore="ContentDescription" />
+            android:padding="20dp">
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/About_Ourstartup"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Name Section -->
+            <include
+                android:id="@+id/name_infotwo"
+                layout="@layout/info_tile"
+                android:tag="Name:Sayan Majumder"
+                tools:ignore="RtlHardcoded" />
+
+            <!-- Two Buttons Horizontally -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/text9"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:padding="16dp"
-                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="16dp"
                 android:gravity="center"
-                tools:ignore="TextSizeCheck,VisualLintLongText"     >
-            </TextView>
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button"
+                    android:elevation="4dp"
+                    android:padding="12dp"
+                    android:text="@string/Learn_more"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    tools:ignore="VisualLintButtonSize,TextContrastCheck" />
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button"
+                    android:elevation="4dp"
+                    android:padding="12dp"
+                    android:text="@string/conatct_us"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    tools:ignore="VisualLintButtonSize,TextContrastCheck" />
+            </LinearLayout>
+
         </LinearLayout>
-    </ScrollView>
-</RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

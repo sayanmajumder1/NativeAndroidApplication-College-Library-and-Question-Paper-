@@ -1,24 +1,44 @@
 package com.example.myapplication;
 
+
+
+import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.IntentSenderRequest;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.google.android.play.core.appupdate.AppUpdateInfo;
+import com.google.android.play.core.appupdate.AppUpdateManager;
+import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
+import com.google.android.play.core.appupdate.AppUpdateOptions;
+import com.google.android.play.core.install.model.AppUpdateType;
+import com.google.android.play.core.install.model.UpdateAvailability;
 
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout; // import  drawer layout , navigation view , toggle for side navigation bar, tab layout , tab-items , viewpager and fragment manger
@@ -27,14 +47,47 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     fragmentmaneger fragmentManeger;
+    private AppUpdateManager appUpdateManager;
+   private ActivityResultLauncher<IntentSenderRequest> updateLauncher;
 
-    //     EditText    editTextText;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        appUpdateManager = AppUpdateManagerFactory.create(this);
+        updateLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartIntentSenderForResult(), // (1) Contract
+                result -> { // (2) Callback
+                    if (result.getResultCode() != Activity.RESULT_OK) {
+                        Log.e("Update", "Update failed or canceled by user");
+                        Toast.makeText(this, "Update failed! Please try again later.", Toast.LENGTH_SHORT).show();
+                    }
+                }
+        );
+        checkForUpdate();  // Call update check on app start
+
+
 
         // FireBase Notification Setup Process Code
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
+                    != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.POST_NOTIFICATIONS}, 101);
+            }
+        }
+
+
+
+
+
+
+
+
 //editTextText = findViewById(R.id.editTextText);
 //        FirebaseMessaging.getInstance().getToken()
 //                .addOnCompleteListener(task -> {
@@ -206,5 +259,88 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    private void checkForUpdate() {
+        Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
+
+        appUpdateInfoTask.addOnSuccessListener(appUpdateInfo -> {
+            if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE) {
+
+                // If immediate update is allowed, start update process
+                if (appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)) {
+                    startImmediateUpdate(appUpdateInfo);
+                }
+             // Otherwise, check for flexible update
+                else if (appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
+                    startFlexibleUpdate(appUpdateInfo);
+               }
+        }
+
+
+
+
+
+        }).addOnFailureListener(e -> Log.e("Update", "Failed to check for updates", e));
+
+
+
     }
+
+    private void startFlexibleUpdate(AppUpdateInfo appUpdateInfo) {
+        try {
+            appUpdateManager.startUpdateFlowForResult(
+                    appUpdateInfo,
+                    updateLauncher,
+                    AppUpdateOptions.newBuilder(AppUpdateType.FLEXIBLE).build()
+            );
+
+            // Monitor the update status
+            appUpdateManager.registerListener(state -> {
+                if (state.installStatus() == com.google.android.play.core.install.model.InstallStatus.DOWNLOADED) {
+                    showUpdateSnackbar();
+                }
+            });
+
+        } catch (Exception e) {
+            Log.e("Update", "Error starting flexible update", e);
+            Toast.makeText(this, "Failed to start flexible update.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void showUpdateSnackbar() {
+
+        Snackbar.make(findViewById(android.R.id.content),
+                        "Update downloaded. Restart app to apply changes.",
+                        Snackbar.LENGTH_INDEFINITE)
+                .setAction("Restart", v -> appUpdateManager.completeUpdate())
+                .show();
+    }
+
+    private void startImmediateUpdate(AppUpdateInfo appUpdateInfo) {
+        try {
+            appUpdateManager.startUpdateFlowForResult(
+                    appUpdateInfo,
+                    updateLauncher,
+                    AppUpdateOptions.newBuilder(AppUpdateType.IMMEDIATE).build()
+            );
+        } catch (Exception e) {
+            Log.e("Update", "Error starting immediate update", e);
+            Toast.makeText(this, "Failed to start immediate update.", Toast.LENGTH_SHORT).show();
+        }
+
+
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // If an update is in progress, resume it
+        appUpdateManager.getAppUpdateInfo().addOnSuccessListener(appUpdateInfo -> {
+            if (appUpdateInfo.updateAvailability() == UpdateAvailability.DEVELOPER_TRIGGERED_UPDATE_IN_PROGRESS) {
+                startImmediateUpdate(appUpdateInfo);
+            }
+        });
+    }
+
+}
 

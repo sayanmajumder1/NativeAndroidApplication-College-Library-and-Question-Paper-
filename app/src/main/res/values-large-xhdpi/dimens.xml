@@ -4,10 +4,9 @@
     <dimen name="dim_5">7.5dp</dimen>
     <dimen name="dim_6">9dp</dimen>
     <dimen name="dim_7">10.5dp</dimen>
-    <dimen name="dim_8">12dp</dimen>
+    <dimen name="dim_8" tools:ignore="MissingDefaultResource">12dp</dimen>
     <dimen name="dim_10">15dp</dimen>
     <dimen name="dim_11">16.5dp</dimen>
-    <dimen name="dim_13">19.5dp</dimen>
     <dimen name="dim_15">22.5dp</dimen>
     <dimen name="dim_16">24dp</dimen>
     <dimen name="dim_20">30dp</dimen>
@@ -15,7 +14,6 @@
     <dimen name="dim_32">48dp</dimen>
     <dimen name="dim_34">51dp</dimen>
     <dimen name="dim_35">52.5dp</dimen>
-    <dimen name="dim_36" tools:ignore="MissingDefaultResource">54dp</dimen>
     <dimen name="dim_40">60dp</dimen>
     <dimen name="dim_46">69dp</dimen>
     <dimen name="dim_48">72dp</dimen>
@@ -24,16 +22,13 @@
     <dimen name="dim_67">100.5dp</dimen>
     <dimen name="dim_69">103.5dp</dimen>
     <dimen name="dim_76">114dp</dimen>
-    <dimen name="dim_80" tools:ignore="MissingDefaultResource">120dp</dimen>
     <dimen name="dim_92">138dp</dimen>
     <dimen name="dim_104">156dp</dimen>
     <dimen name="dim_108">162dp</dimen>
     <dimen name="dim_160">240dp</dimen>
     <dimen name="dim_169">253.5dp</dimen>
-    <dimen name="dim_172" tools:ignore="MissingDefaultResource">258dp</dimen>
     <dimen name="dim_175">262.5dp</dimen>
     <dimen name="dim_181">271.5dp</dimen>
-    <dimen name="dim_192">288dp</dimen>
     <dimen name="dim_195">292.5dp</dimen>
     <dimen name="dim_200">300dp</dimen>
     <dimen name="dim_215">322.5dp</dimen>
@@ -41,10 +36,7 @@
     <dimen name="dim_282">423dp</dimen>
     <dimen name="dim_300">450dp</dimen>
     <dimen name="dim_350">525dp</dimen>
-    <dimen name="dim_372" tools:ignore="MissingDefaultResource">558dp</dimen>
     <dimen name="dim_378">567dp</dimen>
-    <dimen name="dim_379" tools:ignore="MissingDefaultResource">568.5dp</dimen>
-    <dimen name="dim_381">571.5dp</dimen>
     <dimen name="dim_398">597dp</dimen>
     <dimen name="dim_434">651dp</dimen>
 </resources>

@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,6 +17,7 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -66,7 +69,17 @@ public class chatai extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_chatai);
 
-        // Adjust the window insets for better keyboard handling
+        // Change status bar color
+        Window window = getWindow();
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.statusbar)); // Updated method
+
+
+
+
+
+
+    // Adjust the window insets for better keyboard handling
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.edittext), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -75,6 +88,9 @@ public class chatai extends AppCompatActivity {
 
         initializeUI();
         loadChatHistory();
+
+
+
     }
 
     private void initializeUI() {
@@ -219,5 +235,11 @@ public class chatai extends AppCompatActivity {
         super.onDestroy();
         sharedPreferences.edit().remove(KEY_CHAT_HISTORY).apply(); // Remove saved chat
     }
+
+
+
+
+
+
 }
 

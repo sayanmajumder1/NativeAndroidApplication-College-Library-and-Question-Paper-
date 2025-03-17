@@ -4,10 +4,9 @@
     <dimen name="dim_5">10dp</dimen>
     <dimen name="dim_6">12dp</dimen>
     <dimen name="dim_7">14dp</dimen>
-    <dimen name="dim_8">16dp</dimen>
+    <dimen name="dim_8" tools:ignore="MissingDefaultResource">16dp</dimen>
     <dimen name="dim_10">20dp</dimen>
     <dimen name="dim_11">22dp</dimen>
-    <dimen name="dim_13">26dp</dimen>
     <dimen name="dim_15">30dp</dimen>
     <dimen name="dim_16">32dp</dimen>
     <dimen name="dim_20">40dp</dimen>
@@ -15,7 +14,6 @@
     <dimen name="dim_32">64dp</dimen>
     <dimen name="dim_34">68dp</dimen>
     <dimen name="dim_35">70dp</dimen>
-    <dimen name="dim_36" tools:ignore="MissingDefaultResource">72dp</dimen>
     <dimen name="dim_40">80dp</dimen>
     <dimen name="dim_46">92dp</dimen>
     <dimen name="dim_48">96dp</dimen>
@@ -24,16 +22,13 @@
     <dimen name="dim_67">134dp</dimen>
     <dimen name="dim_69">138dp</dimen>
     <dimen name="dim_76">152dp</dimen>
-    <dimen name="dim_80" tools:ignore="MissingDefaultResource">160dp</dimen>
     <dimen name="dim_92">184dp</dimen>
     <dimen name="dim_104">208dp</dimen>
     <dimen name="dim_108">216dp</dimen>
     <dimen name="dim_160">320dp</dimen>
     <dimen name="dim_169">338dp</dimen>
-    <dimen name="dim_172" tools:ignore="MissingDefaultResource">344dp</dimen>
     <dimen name="dim_175">350dp</dimen>
     <dimen name="dim_181">362dp</dimen>
-    <dimen name="dim_192">384dp</dimen>
     <dimen name="dim_195">390dp</dimen>
     <dimen name="dim_200">400dp</dimen>
     <dimen name="dim_215">430dp</dimen>
@@ -41,10 +36,7 @@
     <dimen name="dim_282">564dp</dimen>
     <dimen name="dim_300">600dp</dimen>
     <dimen name="dim_350">700dp</dimen>
-    <dimen name="dim_372" tools:ignore="MissingDefaultResource">744dp</dimen>
     <dimen name="dim_378">756dp</dimen>
-    <dimen name="dim_379" tools:ignore="MissingDefaultResource">758dp</dimen>
-    <dimen name="dim_381">762dp</dimen>
     <dimen name="dim_398">796dp</dimen>
     <dimen name="dim_434">868dp</dimen>
 </resources>

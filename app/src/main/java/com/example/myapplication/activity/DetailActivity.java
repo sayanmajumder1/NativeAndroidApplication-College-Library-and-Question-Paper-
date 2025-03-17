@@ -1,14 +1,11 @@
 package com.example.myapplication.activity;
 
-import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
@@ -29,8 +26,6 @@ public class DetailActivity extends AppCompatActivity {
      ViewPager2 viewPager2;
      LinearLayout linearLayout;
      ProgressBar loader;
-     TextView animatedText;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,10 +47,8 @@ public class DetailActivity extends AppCompatActivity {
         linearLayout = findViewById(R.id.pdfViewer1);
         loader = findViewById(R.id.pdf_loader1);
         viewPager2 = findViewById(R.id.text_book);
-        animatedText = findViewById(R.id.animatedText);
 
-        // Animate TextView (Swipe Left to Right)
-        startTextAnimation();
+
 
         // Handle text or PDF content display
         if (type.contains("text")) {
@@ -71,21 +64,14 @@ public class DetailActivity extends AppCompatActivity {
         }
     }
 
-    // Method to start animation
-    private void startTextAnimation() {
-        ObjectAnimator animator = ObjectAnimator.ofFloat(animatedText, "translationX", -800f, 800f);
-        animator.setDuration(2000); // 2 seconds animation
-        animator.setInterpolator(new AccelerateDecelerateInterpolator()); // Smooth effect
-        animator.setRepeatCount(ObjectAnimator.INFINITE); // Infinite loop
-        animator.setRepeatMode(ObjectAnimator.REVERSE); // Moves back and forth
-        animator.start(); // Start animation
-    }
+
+
 
     @SuppressLint({"NotifyDataSetChanged", "SetTextI18n"})
     private void initText() {
         adapter = new TextBookAdapter(list, DetailActivity.this);
         viewPager2.setAdapter(adapter);
-        viewPager2.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);  // Set horizontal orientation
+        viewPager2.setOrientation(ViewPager2.ORIENTATION_VERTICAL);  // Set  Vertical  orientation
 
         // Breakpoint for chapters of all books using the tilde symbol (~)
         if (content.contains("~~")) {

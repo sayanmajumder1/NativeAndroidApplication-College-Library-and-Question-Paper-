@@ -10,11 +10,31 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="47dp"
+        android:layout_width="413dp"
+        android:layout_height="58dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints,VisualLintBounds">
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/button1"
+            android:layout_width="@dimen/dim_67"
+            android:layout_height="@dimen/dim_69"
+            android:background="@null"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintBounds"
+            tools:layout_editor_absoluteY="@dimen/dim_3"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            app:tint="@android:color/white"
+            />
+    </com.google.android.material.appbar.MaterialToolbar>
 
     <ImageView
         android:layout_width="match_parent"
@@ -25,37 +45,7 @@
     android:src="@drawable/untitleddesignh"
     tools:ignore="VisualLintBounds" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dim_46"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="0dp"
-        android:layout_below="@id/materialToolbar"
-    tools:ignore="UselessLeaf,TextSizeCheck">
 
-        <ImageButton
-            android:id="@+id/button1"
-            android:layout_width="44dp"
-            android:layout_height="46dp"
-            android:layout_marginStart="@dimen/dim_16"
-            android:layout_marginTop="@dimen/dim_3"
-            android:background="@null"
-            android:src="@drawable/baseline_arrow_back_24"
-            tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:text="@string/text8"
-            android:textAlignment="gravity"
-            android:textColorHint="#1B1818"
-            android:textSize="19sp"
-            android:textStyle="bold"
-            tools:ignore="TextSizeCheck,VisualLintBounds" />
-    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyle33"

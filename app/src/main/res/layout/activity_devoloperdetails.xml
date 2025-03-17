@@ -1,115 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/untitleddesignh"
-    tools:context=".devoloperdetails"
-    android:id="@+id/edittext"
-    tools:ignore="Overdraw">
+    android:fillViewport="true">
 
-    <!-- ScrollView for handling overflow -->
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <!-- Header Section -->
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp">
+            android:layout_height="300dp"
+            android:background="#F4790C"
+            android:paddingTop="50dp"
+            android:paddingBottom="30dp">
 
             <!-- Back Button -->
             <ImageButton
-                android:id="@+id/button711"
-                android:layout_width="28dp"
-                android:layout_height="43dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:id="@+id/button7"
+                android:layout_width="@dimen/dim_46"
+                android:layout_height="@dimen/dim_34"
+                android:layout_marginStart="@dimen/dim_16"
+                android:layout_marginTop="@dimen/dim_3"
                 android:background="@null"
-                android:src="@drawable/baseline_arrow_back_24"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-            <!-- Developer Image -->
-            <ImageView
-                android:id="@+id/developerImage"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginTop="32dp"
-                android:src="@drawable/devoloper"
-                android:contentDescription="@string/hii"
-                android:scaleType="centerCrop"
-                android:background="@drawable/circle_background"
-                android:transitionName="developerImageTransition"
-                app:layout_constraintTop_toBottomOf="@+id/button711"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
-
-            <!-- Developer Name -->
-            <TextView
-                android:id="@+id/developerName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/devoloper"
-                android:textColor="#5D4037"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/developerImage" />
-
-            <!-- Developer Email -->
-            <TextView
-                android:id="@+id/developerEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:autoLink="email"
-                android:text="@string/sayanmajumder566"
-                android:textColor="@color/gray"
-                android:textSize="16sp"
-                app:layout_constraintTop_toBottomOf="@+id/developerName"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="8dp"
-                tools:ignore="TextContrastCheck" />
-
-            <!-- About the Developer -->
-            <TextView
-                android:id="@+id/aboutDeveloper"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/devoloperabout"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:lineSpacingExtra="4dp"
-                android:padding="8dp"
-                android:background="@drawable/rectangle"
-                app:layout_constraintTop_toBottomOf="@+id/developerEmail"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                tools:ignore="VisualLintLongText" />
-
-            <!-- Send Email Button -->
-            <Button
-                android:id="@+id/sendEmailButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:backgroundTint="@color/purple_500"
-                android:text="@string/send"
-                android:textColor="#FFCCBC"
+                android:src="@drawable/baseline_arrow_back_ios_24"
+                app:tint="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/aboutDeveloper"
-                tools:ignore="TextContrastCheck,TextContrastCheck" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintBounds">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+            </ImageButton>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profile_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/devoloper"
+                android:scaleType="centerCrop"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="@android:color/white"
+                app:shapeAppearanceOverlay="@style/CircleImageView"/>
+
+
+
+            <!-- Username -->
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/developer_name"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <!-- Website Link -->
+            <TextView
+                android:id="@+id/website_link"
+                android:layout_width="363dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/username"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="-4dp"
+                android:clickable="true"
+                android:ellipsize="end"
+                android:focusable="true"
+                android:gravity="center"
+                android:maxLines="1"
+                android:minHeight="49dp"
+                android:text="@string/developer_website"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck,TextSizeCheck" />
+
+
+        </RelativeLayout>
+
+        <!-- Account Info Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/developer_information"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="10dp"/>
+
+            <!-- Name -->
+            <include layout="@layout/info_tile"
+                android:id="@+id/name_info"
+                android:tag="Name:Sayan Majumder"
+
+                tools:ignore="RtlHardcoded" />
+
+            <!-- Mobile -->
+            <include layout="@layout/info_tile"
+                android:id="@+id/phone_info"
+                android:tag="Mobile:+91-9883422711"
+
+                tools:ignore="RtlHardcoded" />
+
+            <!-- Email -->
+            <include layout="@layout/info_tile"
+                android:id="@+id/email_info"
+                android:clickable="true"
+                android:focusable="true"/>
+
+
+            <!-- Address -->
+            <include layout="@layout/info_tile"
+                android:id="@+id/address_info"
+                android:tag="Address:West Bengal, Purba Bardhaman"
+                android:drawableLeft="@drawable/twotone_add_location_alt_24"
+                tools:ignore="RtlHardcoded" />
+
+            <!-- Date of Birth -->
+            <include layout="@layout/info_tile"
+                android:id="@+id/dob_info"
+                android:tag="D.O.B:10-04-2005"
+               />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+

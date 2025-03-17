@@ -4,10 +4,9 @@
     <dimen name="dim_5">3.75dp</dimen>
     <dimen name="dim_6">4.5dp</dimen>
     <dimen name="dim_7">5.25dp</dimen>
-    <dimen name="dim_8">6dp</dimen>
+    <dimen name="dim_8" tools:ignore="MissingDefaultResource">6dp</dimen>
     <dimen name="dim_10">7.5dp</dimen>
     <dimen name="dim_11">8.25dp</dimen>
-    <dimen name="dim_13">9.75dp</dimen>
     <dimen name="dim_15">11.25dp</dimen>
     <dimen name="dim_16">12dp</dimen>
     <dimen name="dim_20">15dp</dimen>
@@ -15,7 +14,6 @@
     <dimen name="dim_32">24dp</dimen>
     <dimen name="dim_34">25.5dp</dimen>
     <dimen name="dim_35">26.25dp</dimen>
-    <dimen name="dim_36" tools:ignore="MissingDefaultResource">27dp</dimen>
     <dimen name="dim_40">30dp</dimen>
     <dimen name="dim_46">34.5dp</dimen>
     <dimen name="dim_48">36dp</dimen>
@@ -24,16 +22,13 @@
     <dimen name="dim_67">50.25dp</dimen>
     <dimen name="dim_69">51.75dp</dimen>
     <dimen name="dim_76">57dp</dimen>
-    <dimen name="dim_80" tools:ignore="MissingDefaultResource">60dp</dimen>
     <dimen name="dim_92">69dp</dimen>
     <dimen name="dim_104">78dp</dimen>
     <dimen name="dim_108">81dp</dimen>
     <dimen name="dim_160">120dp</dimen>
     <dimen name="dim_169">126.75dp</dimen>
-    <dimen name="dim_172" tools:ignore="MissingDefaultResource">129dp</dimen>
     <dimen name="dim_175">131.25dp</dimen>
     <dimen name="dim_181">135.75dp</dimen>
-    <dimen name="dim_192">144dp</dimen>
     <dimen name="dim_195">146.25dp</dimen>
     <dimen name="dim_200">150dp</dimen>
     <dimen name="dim_215">161.25dp</dimen>
@@ -41,10 +36,7 @@
     <dimen name="dim_282">211.5dp</dimen>
     <dimen name="dim_300">225dp</dimen>
     <dimen name="dim_350">262.5dp</dimen>
-    <dimen name="dim_372" tools:ignore="MissingDefaultResource">279dp</dimen>
     <dimen name="dim_378">283.5dp</dimen>
-    <dimen name="dim_379" tools:ignore="MissingDefaultResource">284.25dp</dimen>
-    <dimen name="dim_381">285.75dp</dimen>
     <dimen name="dim_398">298.5dp</dimen>
     <dimen name="dim_434">325.5dp</dimen>
 </resources>
