@@ -1,0 +1,361 @@
+/* ===================== General Styles ===================== */
+body {
+    background-color: #ffffff;
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    
+  }
+  /* Navbar */
+  nav {
+    position: fixed;           /* Make it stick */
+    top: 0;                    /* Align to top */
+    left: 0;                   /* Align to left */
+    width: 100%;               /* Full width */
+    z-index: 1000;             /* Make sure it stays on top */
+    background-color: #f8f9fa;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+  }
+  
+  nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav li {
+    height: 50px;
+  }
+  
+  nav a {
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+  }
+  
+  nav a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  nav li:first-child {
+    margin-right: auto;
+  }
+ 
+ 
+
+  
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: right 0.3s ease-in-out;
+    z-index: 1050;
+    padding-top: 20px;
+  }
+  
+  .sidebar.show {
+    right: 0;
+  }
+  
+  
+  
+  .sidebar a:hover {
+    background-color: #f0f0f0;
+  }
+  
+.sidebar li {
+  border-bottom: 1px solid #eee;
+  width: 100%;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect to match navbar */
+.sidebar a:hover {
+  background-color: #f0f0f0;
+  color:  #ad67c8;
+  transform: translateX(5px);
+  border-left: 4px solid  #ad67c8;
+}
+
+/* Icon spacing */
+.sidebar a i {
+  margin-right: 12px;
+  min-width: 20px;
+  text-align: center;
+}
+ /* Hide menu icon on desktop */
+ .menu-icon {
+  display: none;
+}
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hideOnMobile {
+      display: none;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  }
+  
+ 
+  
+  
+  /* ===================== Footer Section ===================== */
+  .footer {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    padding: 40px 0;
+    border-top: 5px solid #ad67c8;
+  }
+  
+  .footer-section h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ad67c8;
+  }
+  
+  .footer-section p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-links a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .footer-links a:hover {
+    color: #ad67c8;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    color: #fff;
+    background: #ad67c8;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    background: #8b4ea7;
+  }
+  
+  .copyright {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+
+
+
+.cardone{
+  padding-top: 90px !important;
+
+}
+  .cardtwo {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding-top: 30px !important;
+    /*  Top padding */
+    padding-right: 90px; /* Right padding */
+    padding-bottom: 90px; /* Bottom padding */
+    padding-left: 90px; /* Left padding */
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+  
+    border: none;
+    border-left: 5px solid #AD67C8;
+  }
+  .cardtwo h3 {
+    font-weight: 600;
+    color: #343a40;
+  }
+
+  .custom-table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+  }
+
+  .modern-table thead {
+    background-color: #f8f9fa;
+  }
+
+  .modern-table th {
+    font-weight: 600;
+    color: #495057;
+    background-color: #f1f3f5;
+  }
+
+  .modern-table td, .modern-table th {
+    white-space: nowrap;
+    padding: 14px 20px;
+  }
+
+  .modern-table tbody tr {
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .modern-table tbody tr:hover {
+    background-color: #f1f3f5;
+  }
+
+  .icon-purple {
+    color: #6f42c1;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .badge.bg-gradient-primary {
+    background: linear-gradient(45deg, #5e60ce, #4361ee);
+    color: #fff;
+  }
+
+
+/*LogOut Button */
+
+ /* Center the logout button */
+.logout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+/* Stylish logout button */
+.logout-button-two {
+  background-color: #dc3545;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover animation */
+.logout-button-two:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* Optional: Click (active) effect */
+.logout-button-two:active {
+  transform: scale(0.98);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container{
+  padding-bottom: 90px;
+}
+
+ .card {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border: none;
+      border-left: 5px solid #AD67C8;
+    }
+
+    .user-table th,
+    .user-table td {
+      vertical-align: middle;
+    }
+
+    .table-header {
+      background-color: #AD67C8;
+      color: white;
+    }
+
+    .table-header th {
+      border-color: #AD67C8;
+    }
+
+    .card .card-body {
+      padding: 2rem;
+    }
+
+    h3 {
+      color: #AD67C8;
+      font-weight: bold;
+    }

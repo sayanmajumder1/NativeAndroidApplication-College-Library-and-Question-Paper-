@@ -64,9 +64,6 @@ public class DetailActivity extends AppCompatActivity {
         }
     }
 
-
-
-
     @SuppressLint({"NotifyDataSetChanged", "SetTextI18n"})
     private void initText() {
         adapter = new TextBookAdapter(list, DetailActivity.this);
